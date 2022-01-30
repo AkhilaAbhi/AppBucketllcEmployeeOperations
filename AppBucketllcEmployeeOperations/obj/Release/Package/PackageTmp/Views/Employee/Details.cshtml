@@ -1,0 +1,82 @@
+﻿@model AppBucketllcEmployeeOperations.Models.tblEmployee
+
+@{
+    ViewBag.Title = "Details";
+}
+<br />
+<h3>Employee Deatils</h3>
+<div style="font-size:medium;color:blue">
+    @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)<b> (@Html.DisplayFor(model => model.EmpId)</b>)
+</div>
+<div>
+    @*<h4>tblEmployee</h4>*@
+    <hr />
+    <dl class="dl-horizontal">
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mobile)
+        </dd>
+
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.Department)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Designation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Designation)
+        </dd>
+
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div style="font-size:small;font-weight:bold;">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.EmpId}) |
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</p>

@@ -1,0 +1,85 @@
+﻿@model AppBucketllcEmployeeOperations.Models.tblEmployee
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<br />
+<h4 style="color:blue">Are you sure you want to delete <b> @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName) (@Html.DisplayFor(model => model.EmpId))</b></h4>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mobile)
+        </dd>
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.Department)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Designation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Designation)
+        </dd>
+
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+
+        <br />
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+
+            @Html.ActionLink("Back to List", "Index") |
+            <input type="submit" value="Delete" class="btn btn-default"  style="font-size:medium;font-weight:bold;color:cadetblue"  /> 
+            
+        </div>
+    }
+</div>
